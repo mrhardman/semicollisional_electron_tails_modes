@@ -2,9 +2,27 @@
 Software for finding linear eigenmodes in a reduced, semi-collisional, model for electron-driven microinstabilities in toroidal magnetic confinement fusion devices.
 
 
-To install, download the program files and install python version 3.6.9.
+To install, download the program files and install python version 3.6.4 or above. (The software likely works on earlier versions of python3.)
 
 Create a virtual environment and install the required packages from the requirements.txt file. For instructions, see, for example, https://docs.python.org/3/tutorial/venv.html
+
+Make a virtual environment (test-env) from the python3 available on your OS by 
+
+$ python3 -m venv test-env
+
+Activate the environment by 
+
+$ source test-env/bin/activate
+
+Then make sure you have the latest version of pip:
+
+$ pip install --upgrade pip
+
+Finally, install the required modules:
+
+$ python3 -m pip install -r requirements.txt 
+
+
 
 To run the eigensolver in the main directory use 
 

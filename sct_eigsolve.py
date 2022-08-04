@@ -128,7 +128,7 @@ def get_electrostatic_eigfns(eigfns,zed,nzh,pin):
         norm = dens[imax]
         dens_full[:,imode] = dens/norm
         temp_full[:,imode] = eigfns[nzed:2*nzed,imode]/norm
-        current[imode] = (a0*(dens_full[ized_dzp]-dens_full[ized_dzm])+ a1*(temp_full[ized_dzp]-temp_full[ized_dzm]) )/(2.*Dzed)
+        current[imode] = (a0*(dens_full[ized_dzp,imode]-dens_full[ized_dzm,imode])+ a1*(temp_full[ized_dzp,imode]-temp_full[ized_dzm,imode]) )/(2.*Dzed)
     
     return dens_full, temp_full, current, zed
     
